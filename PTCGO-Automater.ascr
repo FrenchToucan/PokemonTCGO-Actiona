@@ -1,0 +1,926 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scriptfile>
+    <settings program="actiona" version="3.10.1" scriptVersion="1.1.0" os="GNU/Linux"/>
+    <actions>
+        <action name="ActionKey" version="1.0.0"/>
+        <action name="ActionFindImage" version="1.1.0"/>
+        <action name="ActionClick" version="1.0.0"/>
+        <action name="ActionReadTextFile" version="1.0.0"/>
+        <action name="ActionWriteText" version="1.0.0"/>
+        <action name="ActionMessageBox" version="1.0.0"/>
+        <action name="ActionCallProcedure" version="1.0.0"/>
+        <action name="ActionBeginProcedure" version="1.0.0"/>
+        <action name="ActionNotify" version="1.0.0"/>
+        <action name="ActionEndProcedure" version="1.0.0"/>
+    </actions>
+    <parameters/>
+    <resources/>
+    <script pauseBefore="0" pauseAfter="0">
+        <action name="ActionBeginProcedure" comment="Display error message.">
+            <exception id="0" action="0" line=""/>
+            <exception id="1" action="0" line=""/>
+            <exception id="2" action="1" line=""/>
+            <parameter name="name">
+                <subParameter name="value" code="0">ProcErrorNoImage</subParameter>
+            </parameter>
+        </action>
+        <action name="ActionNotify" comment="Display error message saying the image that was being searched for could not be found.">
+            <exception id="0" action="0" line=""/>
+            <exception id="1" action="0" line=""/>
+            <exception id="2" action="1" line=""/>
+            <exception id="32" action="0" line=""/>
+            <parameter name="icon">
+                <subParameter name="value" code="0"></subParameter>
+            </parameter>
+            <parameter name="text">
+                <subParameter name="value" code="0">Could not find the image.</subParameter>
+            </parameter>
+            <parameter name="timeout">
+                <subParameter name="value" code="0">3000</subParameter>
+            </parameter>
+            <parameter name="title">
+                <subParameter name="value" code="0">Error</subParameter>
+            </parameter>
+        </action>
+        <action name="ActionEndProcedure">
+            <exception id="0" action="0" line=""/>
+            <exception id="1" action="0" line=""/>
+            <exception id="2" action="1" line=""/>
+        </action>
+        <action name="ActionBeginProcedure" comment="Open Pokemon TCG Online.">
+            <exception id="0" action="0" line=""/>
+            <exception id="1" action="0" line=""/>
+            <exception id="2" action="1" line=""/>
+            <parameter name="name">
+                <subParameter name="value" code="0">ProcLaunchPTCGO</subParameter>
+            </parameter>
+        </action>
+        <action name="ActionKey" comment="Press Super key." pauseAfter="1000">
+            <exception id="0" action="0" line=""/>
+            <exception id="1" action="0" line=""/>
+            <exception id="2" action="1" line=""/>
+            <exception id="32" action="0" line=""/>
+            <exception id="33" action="0" line=""/>
+            <parameter name="action">
+                <subParameter name="value" code="0">pressRelease</subParameter>
+            </parameter>
+            <parameter name="alt">
+                <subParameter name="value" code="0">true</subParameter>
+            </parameter>
+            <parameter name="amount">
+                <subParameter name="value" code="0">1</subParameter>
+            </parameter>
+            <parameter name="ctrl">
+                <subParameter name="value" code="0">false</subParameter>
+            </parameter>
+            <parameter name="key">
+                <subParameter name="isQtKey" code="0">true</subParameter>
+                <subParameter name="key" code="0">F1</subParameter>
+            </parameter>
+            <parameter name="meta">
+                <subParameter name="value" code="0">false</subParameter>
+            </parameter>
+            <parameter name="pause">
+                <subParameter name="value" code="0">10</subParameter>
+            </parameter>
+            <parameter name="shift">
+                <subParameter name="value" code="0">false</subParameter>
+            </parameter>
+            <parameter name="type">
+                <subParameter name="value" code="0">Win32</subParameter>
+            </parameter>
+        </action>
+        <action name="ActionWriteText" comment="Type in 'Poke'." pauseAfter="100">
+            <exception id="0" action="0" line=""/>
+            <exception id="1" action="0" line=""/>
+            <exception id="2" action="1" line=""/>
+            <exception id="32" action="0" line=""/>
+            <parameter name="noUnicodeCharacters">
+                <subParameter name="value" code="0">false</subParameter>
+            </parameter>
+            <parameter name="pause">
+                <subParameter name="value" code="0">0</subParameter>
+            </parameter>
+            <parameter name="text">
+                <subParameter name="value" code="0">poke</subParameter>
+            </parameter>
+        </action>
+        <action name="ActionKey" comment="Press Enter." pauseAfter="12000">
+            <exception id="0" action="0" line=""/>
+            <exception id="1" action="0" line=""/>
+            <exception id="2" action="1" line=""/>
+            <exception id="32" action="0" line=""/>
+            <exception id="33" action="0" line=""/>
+            <parameter name="action">
+                <subParameter name="value" code="0">pressRelease</subParameter>
+            </parameter>
+            <parameter name="alt">
+                <subParameter name="value" code="0">false</subParameter>
+            </parameter>
+            <parameter name="amount">
+                <subParameter name="value" code="0">1</subParameter>
+            </parameter>
+            <parameter name="ctrl">
+                <subParameter name="value" code="0">false</subParameter>
+            </parameter>
+            <parameter name="key">
+                <subParameter name="isQtKey" code="0">true</subParameter>
+                <subParameter name="key" code="0">Return</subParameter>
+            </parameter>
+            <parameter name="meta">
+                <subParameter name="value" code="0">false</subParameter>
+            </parameter>
+            <parameter name="pause">
+                <subParameter name="value" code="0">10</subParameter>
+            </parameter>
+            <parameter name="shift">
+                <subParameter name="value" code="0">false</subParameter>
+            </parameter>
+            <parameter name="type">
+                <subParameter name="value" code="0">Win32</subParameter>
+            </parameter>
+        </action>
+        <action name="ActionEndProcedure">
+            <exception id="0" action="0" line=""/>
+            <exception id="1" action="0" line=""/>
+            <exception id="2" action="1" line=""/>
+        </action>
+        <action name="ActionBeginProcedure" comment="Login, collect daily bonus and logout.">
+            <exception id="0" action="0" line=""/>
+            <exception id="1" action="0" line=""/>
+            <exception id="2" action="1" line=""/>
+            <parameter name="name">
+                <subParameter name="value" code="0">ProcLogin</subParameter>
+            </parameter>
+        </action>
+        <action name="ActionWriteText" comment="Type username read from file." pauseAfter="2000">
+            <exception id="0" action="0" line=""/>
+            <exception id="1" action="0" line=""/>
+            <exception id="2" action="1" line=""/>
+            <exception id="32" action="0" line=""/>
+            <parameter name="noUnicodeCharacters">
+                <subParameter name="value" code="0">false</subParameter>
+            </parameter>
+            <parameter name="pause">
+                <subParameter name="value" code="0">10</subParameter>
+            </parameter>
+            <parameter name="text">
+                <subParameter name="value" code="0">$VarLogin</subParameter>
+            </parameter>
+        </action>
+        <action name="ActionKey" comment="Press Enter." pauseAfter="500">
+            <exception id="0" action="0" line=""/>
+            <exception id="1" action="0" line=""/>
+            <exception id="2" action="1" line=""/>
+            <exception id="32" action="0" line=""/>
+            <exception id="33" action="0" line=""/>
+            <parameter name="action">
+                <subParameter name="value" code="0">pressRelease</subParameter>
+            </parameter>
+            <parameter name="alt">
+                <subParameter name="value" code="0">false</subParameter>
+            </parameter>
+            <parameter name="amount">
+                <subParameter name="value" code="0">1</subParameter>
+            </parameter>
+            <parameter name="ctrl">
+                <subParameter name="value" code="0">false</subParameter>
+            </parameter>
+            <parameter name="key">
+                <subParameter name="isQtKey" code="0">true</subParameter>
+                <subParameter name="key" code="0">Tab</subParameter>
+            </parameter>
+            <parameter name="meta">
+                <subParameter name="value" code="0">false</subParameter>
+            </parameter>
+            <parameter name="pause">
+                <subParameter name="value" code="0">10</subParameter>
+            </parameter>
+            <parameter name="shift">
+                <subParameter name="value" code="0">false</subParameter>
+            </parameter>
+            <parameter name="type">
+                <subParameter name="value" code="0">Win32</subParameter>
+            </parameter>
+        </action>
+        <action name="ActionWriteText" comment="Type password read from file." pauseAfter="2000">
+            <exception id="0" action="0" line=""/>
+            <exception id="1" action="0" line=""/>
+            <exception id="2" action="1" line=""/>
+            <exception id="32" action="0" line=""/>
+            <parameter name="noUnicodeCharacters">
+                <subParameter name="value" code="0">false</subParameter>
+            </parameter>
+            <parameter name="pause">
+                <subParameter name="value" code="0">10</subParameter>
+            </parameter>
+            <parameter name="text">
+                <subParameter name="value" code="0">$VarPassword</subParameter>
+            </parameter>
+        </action>
+        <action name="ActionKey" comment="Press Enter." pauseAfter="50000">
+            <exception id="0" action="0" line=""/>
+            <exception id="1" action="0" line=""/>
+            <exception id="2" action="1" line=""/>
+            <exception id="32" action="0" line=""/>
+            <exception id="33" action="0" line=""/>
+            <parameter name="action">
+                <subParameter name="value" code="0">pressRelease</subParameter>
+            </parameter>
+            <parameter name="alt">
+                <subParameter name="value" code="0">false</subParameter>
+            </parameter>
+            <parameter name="amount">
+                <subParameter name="value" code="0">1</subParameter>
+            </parameter>
+            <parameter name="ctrl">
+                <subParameter name="value" code="0">false</subParameter>
+            </parameter>
+            <parameter name="key">
+                <subParameter name="isQtKey" code="0">true</subParameter>
+                <subParameter name="key" code="0">Return</subParameter>
+            </parameter>
+            <parameter name="meta">
+                <subParameter name="value" code="0">false</subParameter>
+            </parameter>
+            <parameter name="pause">
+                <subParameter name="value" code="0">10</subParameter>
+            </parameter>
+            <parameter name="shift">
+                <subParameter name="value" code="0">false</subParameter>
+            </parameter>
+            <parameter name="type">
+                <subParameter name="value" code="0">Win32</subParameter>
+            </parameter>
+        </action>
+        <action name="ActionFindImage" comment="Find Okay button in current challenges window." pauseAfter="2000">
+            <exception id="0" action="0" line=""/>
+            <exception id="1" action="0" line=""/>
+            <exception id="2" action="1" line=""/>
+            <exception id="32" action="0" line=""/>
+            <parameter name="confidence">
+                <subParameter name="value" code="0"></subParameter>
+            </parameter>
+            <parameter name="confidenceMinimum">
+                <subParameter name="value" code="0">70</subParameter>
+            </parameter>
+            <parameter name="downPyramidCount">
+                <subParameter name="value" code="0">1</subParameter>
+            </parameter>
+            <parameter name="ifFound">
+                <subParameter name="action" code="0">do_nothing</subParameter>
+                <subParameter name="line" code="0">001</subParameter>
+            </parameter>
+            <parameter name="ifNotFound">
+                <subParameter name="action" code="0">goto</subParameter>
+                <subParameter name="line" code="0">25</subParameter>
+            </parameter>
+            <parameter name="imageToFind">
+                <subParameter name="value" code="0">/home/mike/Downloads/Start-current-challenges.png</subParameter>
+            </parameter>
+            <parameter name="imageToSearchIn">
+                <subParameter name="value" code="0"></subParameter>
+            </parameter>
+            <parameter name="maximumMatches">
+                <subParameter name="value" code="0">1</subParameter>
+            </parameter>
+            <parameter name="method">
+                <subParameter name="value" code="0">correlationcoefficient</subParameter>
+            </parameter>
+            <parameter name="position">
+                <subParameter name="value" code="0">LocStartCurrentChallenges</subParameter>
+            </parameter>
+            <parameter name="searchDelay">
+                <subParameter name="value" code="0">250</subParameter>
+            </parameter>
+            <parameter name="searchExpansion">
+                <subParameter name="value" code="0">15</subParameter>
+            </parameter>
+            <parameter name="source">
+                <subParameter name="value" code="0">window</subParameter>
+            </parameter>
+            <parameter name="windowName">
+                <subParameter name="value" code="0">WineDesktop - Wine desktop</subParameter>
+            </parameter>
+            <parameter name="windowRelativePosition">
+                <subParameter name="value" code="0">false</subParameter>
+            </parameter>
+        </action>
+        <action name="ActionClick" comment="Click Okaybutton in current challenges window." pauseAfter="1000">
+            <exception id="0" action="0" line=""/>
+            <exception id="1" action="0" line=""/>
+            <exception id="2" action="1" line=""/>
+            <exception id="32" action="0" line=""/>
+            <exception id="33" action="0" line=""/>
+            <parameter name="action">
+                <subParameter name="value" code="0">pressRelease</subParameter>
+            </parameter>
+            <parameter name="amount">
+                <subParameter name="value" code="0">1</subParameter>
+            </parameter>
+            <parameter name="button">
+                <subParameter name="value" code="0">left</subParameter>
+            </parameter>
+            <parameter name="position">
+                <subParameter name="unit" code="0">0</subParameter>
+                <subParameter name="value" code="1">LocStartCurrentChallenges</subParameter>
+            </parameter>
+            <parameter name="positionOffset">
+                <subParameter name="unit" code="0">0</subParameter>
+                <subParameter name="value" code="0"></subParameter>
+            </parameter>
+            <parameter name="restoreCursorPosition">
+                <subParameter name="value" code="0">false</subParameter>
+            </parameter>
+        </action>
+        <action name="ActionFindImage" comment="Find unopened daily bonus. Skip if already opened." pauseAfter="2000">
+            <exception id="0" action="0" line=""/>
+            <exception id="1" action="0" line=""/>
+            <exception id="2" action="1" line=""/>
+            <exception id="32" action="0" line=""/>
+            <parameter name="confidence">
+                <subParameter name="value" code="0"></subParameter>
+            </parameter>
+            <parameter name="confidenceMinimum">
+                <subParameter name="value" code="0">70</subParameter>
+            </parameter>
+            <parameter name="downPyramidCount">
+                <subParameter name="value" code="0">1</subParameter>
+            </parameter>
+            <parameter name="ifFound">
+                <subParameter name="action" code="0">do_nothing</subParameter>
+                <subParameter name="line" code="0"></subParameter>
+            </parameter>
+            <parameter name="ifNotFound">
+                <subParameter name="action" code="0">do_nothing</subParameter>
+                <subParameter name="line" code="0"></subParameter>
+            </parameter>
+            <parameter name="imageToFind">
+                <subParameter name="value" code="0">/home/mike/Downloads/Unopened-Prize.png</subParameter>
+            </parameter>
+            <parameter name="imageToSearchIn">
+                <subParameter name="value" code="0"></subParameter>
+            </parameter>
+            <parameter name="maximumMatches">
+                <subParameter name="value" code="0">1</subParameter>
+            </parameter>
+            <parameter name="method">
+                <subParameter name="value" code="0">correlationcoefficient</subParameter>
+            </parameter>
+            <parameter name="position">
+                <subParameter name="value" code="0">LocUnopenedPrize</subParameter>
+            </parameter>
+            <parameter name="searchDelay">
+                <subParameter name="value" code="0">100</subParameter>
+            </parameter>
+            <parameter name="searchExpansion">
+                <subParameter name="value" code="0">15</subParameter>
+            </parameter>
+            <parameter name="source">
+                <subParameter name="value" code="0">window</subParameter>
+            </parameter>
+            <parameter name="windowName">
+                <subParameter name="value" code="0">WineDesktop - Wine desktop</subParameter>
+            </parameter>
+            <parameter name="windowRelativePosition">
+                <subParameter name="value" code="0">false</subParameter>
+            </parameter>
+        </action>
+        <action name="ActionClick" comment="Click unopened daily bonus" pauseAfter="5000">
+            <exception id="0" action="0" line=""/>
+            <exception id="1" action="0" line=""/>
+            <exception id="2" action="1" line=""/>
+            <exception id="32" action="0" line=""/>
+            <exception id="33" action="0" line=""/>
+            <parameter name="action">
+                <subParameter name="value" code="0">pressRelease</subParameter>
+            </parameter>
+            <parameter name="amount">
+                <subParameter name="value" code="0">1</subParameter>
+            </parameter>
+            <parameter name="button">
+                <subParameter name="value" code="0">left</subParameter>
+            </parameter>
+            <parameter name="position">
+                <subParameter name="unit" code="0">0</subParameter>
+                <subParameter name="value" code="1">LocUnopenedPrize</subParameter>
+            </parameter>
+            <parameter name="positionOffset">
+                <subParameter name="unit" code="0">0</subParameter>
+                <subParameter name="value" code="0"></subParameter>
+            </parameter>
+            <parameter name="restoreCursorPosition">
+                <subParameter name="value" code="0">false</subParameter>
+            </parameter>
+        </action>
+        <action name="ActionFindImage" comment="Find Okay button in daily bonus window" pauseAfter="1000">
+            <exception id="0" action="0" line=""/>
+            <exception id="1" action="0" line=""/>
+            <exception id="2" action="1" line=""/>
+            <exception id="32" action="0" line=""/>
+            <parameter name="confidence">
+                <subParameter name="value" code="0"></subParameter>
+            </parameter>
+            <parameter name="confidenceMinimum">
+                <subParameter name="value" code="0">70</subParameter>
+            </parameter>
+            <parameter name="downPyramidCount">
+                <subParameter name="value" code="0">1</subParameter>
+            </parameter>
+            <parameter name="ifFound">
+                <subParameter name="action" code="0">do_nothing</subParameter>
+                <subParameter name="line" code="0">001</subParameter>
+            </parameter>
+            <parameter name="ifNotFound">
+                <subParameter name="action" code="0">goto</subParameter>
+                <subParameter name="line" code="0">025</subParameter>
+            </parameter>
+            <parameter name="imageToFind">
+                <subParameter name="value" code="0">/home/mike/Downloads/Start-Todays-Bonus.png</subParameter>
+            </parameter>
+            <parameter name="imageToSearchIn">
+                <subParameter name="value" code="0"></subParameter>
+            </parameter>
+            <parameter name="maximumMatches">
+                <subParameter name="value" code="0">1</subParameter>
+            </parameter>
+            <parameter name="method">
+                <subParameter name="value" code="0">correlationcoefficient</subParameter>
+            </parameter>
+            <parameter name="position">
+                <subParameter name="value" code="0">LocTodaysBonusOkay</subParameter>
+            </parameter>
+            <parameter name="searchDelay">
+                <subParameter name="value" code="0">100</subParameter>
+            </parameter>
+            <parameter name="searchExpansion">
+                <subParameter name="value" code="0">15</subParameter>
+            </parameter>
+            <parameter name="source">
+                <subParameter name="value" code="0">window</subParameter>
+            </parameter>
+            <parameter name="windowName">
+                <subParameter name="value" code="0">WineDesktop - Wine desktop</subParameter>
+            </parameter>
+            <parameter name="windowRelativePosition">
+                <subParameter name="value" code="0">false</subParameter>
+            </parameter>
+        </action>
+        <action name="ActionClick" comment="Click Okay button on daily bonus window" pauseAfter="3000">
+            <exception id="0" action="0" line=""/>
+            <exception id="1" action="0" line=""/>
+            <exception id="2" action="1" line=""/>
+            <exception id="32" action="0" line=""/>
+            <exception id="33" action="0" line=""/>
+            <parameter name="action">
+                <subParameter name="value" code="0">pressRelease</subParameter>
+            </parameter>
+            <parameter name="amount">
+                <subParameter name="value" code="0">1</subParameter>
+            </parameter>
+            <parameter name="button">
+                <subParameter name="value" code="0">left</subParameter>
+            </parameter>
+            <parameter name="position">
+                <subParameter name="unit" code="0">0</subParameter>
+                <subParameter name="value" code="1">LocTodaysBonusOkay</subParameter>
+            </parameter>
+            <parameter name="positionOffset">
+                <subParameter name="unit" code="0">0</subParameter>
+                <subParameter name="value" code="0"></subParameter>
+            </parameter>
+            <parameter name="restoreCursorPosition">
+                <subParameter name="value" code="0">false</subParameter>
+            </parameter>
+        </action>
+        <action name="ActionFindImage" comment="Find Options button" pauseAfter="1000">
+            <exception id="0" action="0" line=""/>
+            <exception id="1" action="0" line=""/>
+            <exception id="2" action="1" line=""/>
+            <exception id="32" action="0" line=""/>
+            <parameter name="confidence">
+                <subParameter name="value" code="0"></subParameter>
+            </parameter>
+            <parameter name="confidenceMinimum">
+                <subParameter name="value" code="0">70</subParameter>
+            </parameter>
+            <parameter name="downPyramidCount">
+                <subParameter name="value" code="0">1</subParameter>
+            </parameter>
+            <parameter name="ifFound">
+                <subParameter name="action" code="0">do_nothing</subParameter>
+                <subParameter name="line" code="0">001</subParameter>
+            </parameter>
+            <parameter name="ifNotFound">
+                <subParameter name="action" code="0">call_procedure</subParameter>
+                <subParameter name="line" code="0">ProcErrorNoImage</subParameter>
+            </parameter>
+            <parameter name="imageToFind">
+                <subParameter name="value" code="0">/home/mike/Downloads/ButtonOptions.png</subParameter>
+            </parameter>
+            <parameter name="imageToSearchIn">
+                <subParameter name="value" code="0"></subParameter>
+            </parameter>
+            <parameter name="maximumMatches">
+                <subParameter name="value" code="0">1</subParameter>
+            </parameter>
+            <parameter name="method">
+                <subParameter name="value" code="0">correlationcoefficient</subParameter>
+            </parameter>
+            <parameter name="position">
+                <subParameter name="value" code="0">LocOptions</subParameter>
+            </parameter>
+            <parameter name="searchDelay">
+                <subParameter name="value" code="0">100</subParameter>
+            </parameter>
+            <parameter name="searchExpansion">
+                <subParameter name="value" code="0">15</subParameter>
+            </parameter>
+            <parameter name="source">
+                <subParameter name="value" code="0">window</subParameter>
+            </parameter>
+            <parameter name="windowName">
+                <subParameter name="value" code="0">WineDesktop - Wine desktop</subParameter>
+            </parameter>
+            <parameter name="windowRelativePosition">
+                <subParameter name="value" code="0">false</subParameter>
+            </parameter>
+        </action>
+        <action name="ActionClick" comment="Click Options button" pauseAfter="3000">
+            <exception id="0" action="0" line=""/>
+            <exception id="1" action="0" line=""/>
+            <exception id="2" action="1" line=""/>
+            <exception id="32" action="0" line=""/>
+            <exception id="33" action="0" line=""/>
+            <parameter name="action">
+                <subParameter name="value" code="0">pressRelease</subParameter>
+            </parameter>
+            <parameter name="amount">
+                <subParameter name="value" code="0">1</subParameter>
+            </parameter>
+            <parameter name="button">
+                <subParameter name="value" code="0">left</subParameter>
+            </parameter>
+            <parameter name="position">
+                <subParameter name="unit" code="0">0</subParameter>
+                <subParameter name="value" code="1">LocOptions</subParameter>
+            </parameter>
+            <parameter name="positionOffset">
+                <subParameter name="unit" code="0">0</subParameter>
+                <subParameter name="value" code="0"></subParameter>
+            </parameter>
+            <parameter name="restoreCursorPosition">
+                <subParameter name="value" code="0">false</subParameter>
+            </parameter>
+        </action>
+        <action name="ActionFindImage" comment="Find Exit button" pauseAfter="1000">
+            <exception id="0" action="0" line=""/>
+            <exception id="1" action="0" line=""/>
+            <exception id="2" action="1" line=""/>
+            <exception id="32" action="0" line=""/>
+            <parameter name="confidence">
+                <subParameter name="value" code="0"></subParameter>
+            </parameter>
+            <parameter name="confidenceMinimum">
+                <subParameter name="value" code="0">70</subParameter>
+            </parameter>
+            <parameter name="downPyramidCount">
+                <subParameter name="value" code="0">1</subParameter>
+            </parameter>
+            <parameter name="ifFound">
+                <subParameter name="action" code="0">do_nothing</subParameter>
+                <subParameter name="line" code="0">001</subParameter>
+            </parameter>
+            <parameter name="ifNotFound">
+                <subParameter name="action" code="0">call_procedure</subParameter>
+                <subParameter name="line" code="0">ProcErrorNoImage</subParameter>
+            </parameter>
+            <parameter name="imageToFind">
+                <subParameter name="value" code="0">/home/mike/Downloads/ButtonExit.png</subParameter>
+            </parameter>
+            <parameter name="imageToSearchIn">
+                <subParameter name="value" code="0"></subParameter>
+            </parameter>
+            <parameter name="maximumMatches">
+                <subParameter name="value" code="0">1</subParameter>
+            </parameter>
+            <parameter name="method">
+                <subParameter name="value" code="0">correlationcoefficient</subParameter>
+            </parameter>
+            <parameter name="position">
+                <subParameter name="value" code="0">LocExit</subParameter>
+            </parameter>
+            <parameter name="searchDelay">
+                <subParameter name="value" code="0">100</subParameter>
+            </parameter>
+            <parameter name="searchExpansion">
+                <subParameter name="value" code="0">15</subParameter>
+            </parameter>
+            <parameter name="source">
+                <subParameter name="value" code="0">window</subParameter>
+            </parameter>
+            <parameter name="windowName">
+                <subParameter name="value" code="0">WineDesktop - Wine desktop</subParameter>
+            </parameter>
+            <parameter name="windowRelativePosition">
+                <subParameter name="value" code="0">false</subParameter>
+            </parameter>
+        </action>
+        <action name="ActionClick" comment="Click Exit button" pauseAfter="3000">
+            <exception id="0" action="0" line=""/>
+            <exception id="1" action="0" line=""/>
+            <exception id="2" action="1" line=""/>
+            <exception id="32" action="0" line=""/>
+            <exception id="33" action="0" line=""/>
+            <parameter name="action">
+                <subParameter name="value" code="0">pressRelease</subParameter>
+            </parameter>
+            <parameter name="amount">
+                <subParameter name="value" code="0">1</subParameter>
+            </parameter>
+            <parameter name="button">
+                <subParameter name="value" code="0">left</subParameter>
+            </parameter>
+            <parameter name="position">
+                <subParameter name="unit" code="0">0</subParameter>
+                <subParameter name="value" code="1">LocExit</subParameter>
+            </parameter>
+            <parameter name="positionOffset">
+                <subParameter name="unit" code="0">0</subParameter>
+                <subParameter name="value" code="0"></subParameter>
+            </parameter>
+            <parameter name="restoreCursorPosition">
+                <subParameter name="value" code="0">false</subParameter>
+            </parameter>
+        </action>
+        <action name="ActionFindImage" comment="Find Log Out button" pauseAfter="1000">
+            <exception id="0" action="0" line=""/>
+            <exception id="1" action="0" line=""/>
+            <exception id="2" action="1" line=""/>
+            <exception id="32" action="0" line=""/>
+            <parameter name="confidence">
+                <subParameter name="value" code="0"></subParameter>
+            </parameter>
+            <parameter name="confidenceMinimum">
+                <subParameter name="value" code="0">70</subParameter>
+            </parameter>
+            <parameter name="downPyramidCount">
+                <subParameter name="value" code="0">1</subParameter>
+            </parameter>
+            <parameter name="ifFound">
+                <subParameter name="action" code="0">do_nothing</subParameter>
+                <subParameter name="line" code="0">001</subParameter>
+            </parameter>
+            <parameter name="ifNotFound">
+                <subParameter name="action" code="0">call_procedure</subParameter>
+                <subParameter name="line" code="0">ProcErrorNoImage</subParameter>
+            </parameter>
+            <parameter name="imageToFind">
+                <subParameter name="value" code="0">/home/mike/Downloads/ButtonLogout.png</subParameter>
+            </parameter>
+            <parameter name="imageToSearchIn">
+                <subParameter name="value" code="0"></subParameter>
+            </parameter>
+            <parameter name="maximumMatches">
+                <subParameter name="value" code="0">1</subParameter>
+            </parameter>
+            <parameter name="method">
+                <subParameter name="value" code="0">correlationcoefficient</subParameter>
+            </parameter>
+            <parameter name="position">
+                <subParameter name="value" code="0">LocLogOut</subParameter>
+            </parameter>
+            <parameter name="searchDelay">
+                <subParameter name="value" code="0">100</subParameter>
+            </parameter>
+            <parameter name="searchExpansion">
+                <subParameter name="value" code="0">15</subParameter>
+            </parameter>
+            <parameter name="source">
+                <subParameter name="value" code="0">window</subParameter>
+            </parameter>
+            <parameter name="windowName">
+                <subParameter name="value" code="0">WineDesktop - Wine desktop</subParameter>
+            </parameter>
+            <parameter name="windowRelativePosition">
+                <subParameter name="value" code="0">false</subParameter>
+            </parameter>
+        </action>
+        <action name="ActionClick" comment="Click Log Out button" pauseAfter="3000">
+            <exception id="0" action="0" line=""/>
+            <exception id="1" action="0" line=""/>
+            <exception id="2" action="1" line=""/>
+            <exception id="32" action="0" line=""/>
+            <exception id="33" action="0" line=""/>
+            <parameter name="action">
+                <subParameter name="value" code="0">pressRelease</subParameter>
+            </parameter>
+            <parameter name="amount">
+                <subParameter name="value" code="0">1</subParameter>
+            </parameter>
+            <parameter name="button">
+                <subParameter name="value" code="0">left</subParameter>
+            </parameter>
+            <parameter name="position">
+                <subParameter name="unit" code="0">0</subParameter>
+                <subParameter name="value" code="1">LocLogOut</subParameter>
+            </parameter>
+            <parameter name="positionOffset">
+                <subParameter name="unit" code="0">0</subParameter>
+                <subParameter name="value" code="0"></subParameter>
+            </parameter>
+            <parameter name="restoreCursorPosition">
+                <subParameter name="value" code="0">false</subParameter>
+            </parameter>
+        </action>
+        <action name="ActionEndProcedure">
+            <exception id="0" action="0" line=""/>
+            <exception id="1" action="0" line=""/>
+            <exception id="2" action="1" line=""/>
+        </action>
+        <action name="ActionMessageBox">
+            <exception id="0" action="0" line=""/>
+            <exception id="1" action="0" line=""/>
+            <exception id="2" action="1" line=""/>
+            <parameter name="customIcon">
+                <subParameter name="value" code="0"></subParameter>
+            </parameter>
+            <parameter name="icon">
+                <subParameter name="value" code="0">none</subParameter>
+            </parameter>
+            <parameter name="ifNo">
+                <subParameter name="action" code="0">do_nothing</subParameter>
+                <subParameter name="line" code="0"></subParameter>
+            </parameter>
+            <parameter name="ifYes">
+                <subParameter name="action" code="0">do_nothing</subParameter>
+                <subParameter name="line" code="0"></subParameter>
+            </parameter>
+            <parameter name="message">
+                <subParameter name="value" code="0">Welcome</subParameter>
+            </parameter>
+            <parameter name="textMode">
+                <subParameter name="value" code="0">automatic</subParameter>
+            </parameter>
+            <parameter name="title">
+                <subParameter name="value" code="0">Please make sure</subParameter>
+            </parameter>
+            <parameter name="type">
+                <subParameter name="value" code="0">ok</subParameter>
+            </parameter>
+            <parameter name="windowIcon">
+                <subParameter name="value" code="0"></subParameter>
+            </parameter>
+        </action>
+        <action name="ActionCallProcedure">
+            <exception id="0" action="0" line=""/>
+            <exception id="1" action="0" line=""/>
+            <exception id="2" action="1" line=""/>
+            <parameter name="name">
+                <subParameter name="value" code="0">ProcLogin</subParameter>
+            </parameter>
+        </action>
+        <action name="ActionReadTextFile">
+            <exception id="0" action="0" line=""/>
+            <exception id="1" action="0" line=""/>
+            <exception id="2" action="1" line=""/>
+            <exception id="32" action="0" line=""/>
+            <parameter name="file">
+                <subParameter name="value" code="0">/home/mike/Downloads/PTGO Accounts - Sheet1.csv</subParameter>
+            </parameter>
+            <parameter name="firstline">
+                <subParameter name="value" code="0">1</subParameter>
+            </parameter>
+            <parameter name="lastline">
+                <subParameter name="value" code="0">1</subParameter>
+            </parameter>
+            <parameter name="mode">
+                <subParameter name="value" code="0">selection</subParameter>
+            </parameter>
+            <parameter name="variable">
+                <subParameter name="value" code="0">VarLogin</subParameter>
+            </parameter>
+        </action>
+        <action name="ActionReadTextFile">
+            <exception id="0" action="0" line=""/>
+            <exception id="1" action="0" line=""/>
+            <exception id="2" action="1" line=""/>
+            <exception id="32" action="0" line=""/>
+            <parameter name="file">
+                <subParameter name="value" code="0">/home/mike/Downloads/PTGO Accounts - Sheet1.csv</subParameter>
+            </parameter>
+            <parameter name="firstline">
+                <subParameter name="value" code="0">2</subParameter>
+            </parameter>
+            <parameter name="lastline">
+                <subParameter name="value" code="0">2</subParameter>
+            </parameter>
+            <parameter name="mode">
+                <subParameter name="value" code="0">selection</subParameter>
+            </parameter>
+            <parameter name="variable">
+                <subParameter name="value" code="0">VarPassword</subParameter>
+            </parameter>
+        </action>
+        <action name="ActionCallProcedure">
+            <exception id="0" action="0" line=""/>
+            <exception id="1" action="0" line=""/>
+            <exception id="2" action="1" line=""/>
+            <parameter name="name">
+                <subParameter name="value" code="0">ProcLaunchPTCGO</subParameter>
+            </parameter>
+        </action>
+        <action name="ActionReadTextFile">
+            <exception id="0" action="0" line=""/>
+            <exception id="1" action="0" line=""/>
+            <exception id="2" action="1" line=""/>
+            <exception id="32" action="0" line=""/>
+            <parameter name="file">
+                <subParameter name="value" code="0">/home/mike/Downloads/PTGO Accounts - Sheet1.csv</subParameter>
+            </parameter>
+            <parameter name="firstline">
+                <subParameter name="value" code="0">3</subParameter>
+            </parameter>
+            <parameter name="lastline">
+                <subParameter name="value" code="0">3</subParameter>
+            </parameter>
+            <parameter name="mode">
+                <subParameter name="value" code="0">selection</subParameter>
+            </parameter>
+            <parameter name="variable">
+                <subParameter name="value" code="0">VarLogin</subParameter>
+            </parameter>
+        </action>
+        <action name="ActionReadTextFile">
+            <exception id="0" action="0" line=""/>
+            <exception id="1" action="0" line=""/>
+            <exception id="2" action="1" line=""/>
+            <exception id="32" action="0" line=""/>
+            <parameter name="file">
+                <subParameter name="value" code="0">/home/mike/Downloads/PTGO Accounts - Sheet1.csv</subParameter>
+            </parameter>
+            <parameter name="firstline">
+                <subParameter name="value" code="0">4</subParameter>
+            </parameter>
+            <parameter name="lastline">
+                <subParameter name="value" code="0">4</subParameter>
+            </parameter>
+            <parameter name="mode">
+                <subParameter name="value" code="0">selection</subParameter>
+            </parameter>
+            <parameter name="variable">
+                <subParameter name="value" code="0">VarPassword</subParameter>
+            </parameter>
+        </action>
+        <action name="ActionCallProcedure">
+            <exception id="0" action="0" line=""/>
+            <exception id="1" action="0" line=""/>
+            <exception id="2" action="1" line=""/>
+            <parameter name="name">
+                <subParameter name="value" code="1">ProcLogin</subParameter>
+            </parameter>
+        </action>
+        <action name="ActionReadTextFile">
+            <exception id="0" action="0" line=""/>
+            <exception id="1" action="0" line=""/>
+            <exception id="2" action="1" line=""/>
+            <exception id="32" action="0" line=""/>
+            <parameter name="file">
+                <subParameter name="value" code="0">/home/mike/Downloads/PTGO Accounts - Sheet1.csv</subParameter>
+            </parameter>
+            <parameter name="firstline">
+                <subParameter name="value" code="0">5</subParameter>
+            </parameter>
+            <parameter name="lastline">
+                <subParameter name="value" code="0">5</subParameter>
+            </parameter>
+            <parameter name="mode">
+                <subParameter name="value" code="0">selection</subParameter>
+            </parameter>
+            <parameter name="variable">
+                <subParameter name="value" code="0">VarPassword</subParameter>
+            </parameter>
+        </action>
+        <action name="ActionReadTextFile">
+            <exception id="0" action="0" line=""/>
+            <exception id="1" action="0" line=""/>
+            <exception id="2" action="1" line=""/>
+            <exception id="32" action="0" line=""/>
+            <parameter name="file">
+                <subParameter name="value" code="0">/home/mike/Downloads/PTGO Accounts - Sheet1.csv</subParameter>
+            </parameter>
+            <parameter name="firstline">
+                <subParameter name="value" code="0">6</subParameter>
+            </parameter>
+            <parameter name="lastline">
+                <subParameter name="value" code="0">6</subParameter>
+            </parameter>
+            <parameter name="mode">
+                <subParameter name="value" code="0">selection</subParameter>
+            </parameter>
+            <parameter name="variable">
+                <subParameter name="value" code="0">VarPassword</subParameter>
+            </parameter>
+        </action>
+    </script>
+</scriptfile>
