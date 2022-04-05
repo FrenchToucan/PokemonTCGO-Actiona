@@ -1,4 +1,4 @@
-# Pokemon TCG Online Automator
+# Pokemon TCG Online Automation in Actiona
 
 A automation script built in Actiona.
 
